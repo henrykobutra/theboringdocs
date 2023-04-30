@@ -1,10 +1,14 @@
 <script lang="ts">
 	import SelectBusinessType from '../SelectBusinessType.svelte';
+	import InputInfo from '../InputInfo.svelte';
 
 	let step = 1;
 	let businessType = '';
-	function handleStep1() {
-		step = 2;
+	let generatorType = 'cookies';
+	let businessName = '';
+	let businessEmail = '';
+	function handleForward() {
+		step++;
 	}
 	function handleReset() {
 		step = 1;
@@ -15,7 +19,7 @@
 		handleReset();
 	}
 	// Step 1: Select business type
-	$: businessType && handleStep1();
+	$: businessType && handleForward();
 </script>
 
 <div class="flex justify-center mt-8">
@@ -34,17 +38,36 @@
 					<SelectBusinessType bind:businessType />
 				{/if}
 				{#if step === 2}
-					step 2: {businessType}
+					<InputInfo bind:generatorType bind:businessType bind:businessName bind:businessEmail />
 				{/if}
 				<div class="divider" />
-				<div>
+				<section class="w-full flex flex-col items-center">
 					{#if step > 1}
-						<button class="btn btn-primary" on:click={() => step--}>Back</button>
+						<div class="flex flex-row justify-between w-full">
+							<button class="btn btn-outline" on:click={() => step--}>Back</button>
+							<button class="btn btn-primary hover:btn-success" on:click={() => step--}>Next</button
+							>
+						</div>
+						<div class="divider">OR</div>
 					{/if}
-					<button class="btn btn-primary {step < 2 ? 'btn-disabled' : ''}">
-						Just take me to the template
-					</button>
-				</div>
+					<div class="flex flex-col justify-between gap-2">
+						{#if step === 1}
+							<div class="tooltip" data-tip="Just get over step 1 please">
+								<button class="btn btn-warning btn-xs {step < 2 ? 'btn-disabled' : ''}">
+									Just take me to the template
+								</button>
+							</div>
+						{:else}
+							<button class="btn btn-warning btn-sm"> Just take me to the template </button>
+						{/if}
+						{#if step > 1}
+							<div class="divider">OR</div>
+							<button class="btn btn-info btn-sm" on:click={() => handleReset()}>
+								Start Over
+							</button>
+						{/if}
+					</div>
+				</section>
 			</div>
 		</div>
 	</div>
