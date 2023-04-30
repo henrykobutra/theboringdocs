@@ -1,5 +1,5 @@
 <script lang="ts">
-	// export let imgUrl: string;
+	export let url: string;
 	export let title: string;
 	export let jokeQuestion: string;
 	export let jokeResponse: string;
@@ -35,6 +35,6 @@
 		</div>
 		<div class="grow" />
 		<div class="divider" />
-		<button class="btn btn-primary mb-8 hover:btn-success">Create "{title}"</button>
+		<a class="btn btn-primary mb-8 hover:btn-success" href={url}>Create "{title}"</a>
 	</div>
 </div>
