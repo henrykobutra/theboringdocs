@@ -1,6 +1,6 @@
 # Terms and Conditions
 
-Welcome to [You Name]! Before you begin, please take a moment to read our Terms of Service. By accessing or using our website, you agree to be bound by these terms and conditions.
+Welcome to [Your Name]! Before you begin, please take a moment to read our Terms of Service. By accessing or using our website, you agree to be bound by these terms and conditions.
 
 ## Acceptance of Terms
 
