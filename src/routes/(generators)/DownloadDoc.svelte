@@ -1,68 +1,21 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { CodeBlock } from 'svhighlight';
 	import MarkdownIt from 'markdown-it';
 	import removeMarkdown from 'remove-markdown';
 	import 'highlight.js/styles/agate.css';
 
-	export let businessType: string;
-	export let businessName: string;
-	export let businessEmail: string;
+	export let policyMarkdown: string;
 
-	let md: string;
 	let docFormat = 'plaintext';
-	let plaintext: string;
-	let html: string;
-	let code: string;
-
-	async function loadMarkdown() {
-		try {
-			if (businessType === 'app') {
-				md = (await import('./generate-cookies/app.md?raw')).default;
-			} else if (businessType === 'ecommerce') {
-				md = (await import('./generate-cookies/ecommerce.md?raw')).default;
-			} else if (businessType === 'content-creator') {
-				md = (await import('./generate-cookies/content-creator.md?raw')).default;
-			} else if (businessType === 'freelancer') {
-				md = (await import('./generate-cookies/freelancer.md?raw')).default;
-			}
-
-			if (businessEmail != '') {
-				md = replaceText(md, '[Your Email]', businessEmail);
-			}
-			if (businessName != '') {
-				md = replaceText(md, '[Your Name]', businessName);
-			}
-
-			plaintext = removeMarkdown(md);
-			html = MarkdownIt().render(md);
-		} catch (error) {
-			console.error('Error loading the markdown file:', error);
-		}
-	}
-
-	onMount(async () => {
-		loadMarkdown().then(() => {
-			code = plaintext;
-		});
-	});
-
-	function replaceText(inputString: string, searchText: string, replacementText: string): string {
-		const regex = new RegExp(escapeRegExp(searchText), 'g');
-
-		const result = inputString.replace(regex, replacementText);
-
-		return result;
-	}
-	function escapeRegExp(text: string): string {
-		return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
-	}
+	let plaintext: string = removeMarkdown(policyMarkdown);
+	let html: string = MarkdownIt().render(policyMarkdown);
+	let code: string = plaintext;
 
 	$: {
 		if (docFormat === 'plaintext') {
 			code = plaintext;
 		} else if (docFormat === 'md') {
-			code = md;
+			code = policyMarkdown;
 		} else if (docFormat === 'html') {
 			code = html;
 		}

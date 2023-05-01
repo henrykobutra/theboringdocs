@@ -5,10 +5,13 @@
 	import ReviewDoc from '../ReviewDoc.svelte';
 
 	let step = 1;
-	let generatorType = 'cookies';
+	let generatorType = 'generate-cookies';
 	let businessType = '';
 	let businessName = '';
 	let businessEmail = '';
+	let policyMarkdown = '';
+
+	let nextButtonText = 'Next';
 
 	function resetForm() {
 		step = 1;
@@ -36,6 +39,13 @@
 	$: if (businessType) {
 		handleForward();
 	}
+	$: if (businessName === '' && businessEmail === '' && step === 2) {
+		nextButtonText = 'Just Take Me To The Template';
+	} else if (step === 4) {
+		nextButtonText = 'Start Over';
+	} else {
+		nextButtonText = 'Next';
+	}
 </script>
 
 <div class="flex justify-center mt-8">
@@ -57,10 +67,16 @@
 					<InputInfo bind:generatorType bind:businessType bind:businessName bind:businessEmail />
 				{/if}
 				{#if step === 3}
-					<ReviewDoc bind:businessEmail bind:businessName bind:businessType />
+					<ReviewDoc
+						bind:businessEmail
+						bind:businessName
+						bind:businessType
+						bind:generatorType
+						bind:policyMarkdown
+					/>
 				{/if}
 				{#if step === 4}
-					<DownloadDoc bind:businessEmail bind:businessName bind:businessType />
+					<DownloadDoc bind:policyMarkdown />
 				{/if}
 				<section class="w-full flex flex-col items-center">
 					{#if step > 1}
@@ -88,7 +104,7 @@
 									}
 								}}
 							>
-								{step === 4 ? 'Start Over' : 'Next'}
+								{nextButtonText}
 							</button>
 						</div>
 					{/if}
