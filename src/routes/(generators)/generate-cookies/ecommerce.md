@@ -1,6 +1,6 @@
 # Cookie Policy
 
-At [Your Name], we value your privacy and are committed to providing you with clear and transparent information about how we use cookies on our website. This Cookie Policy outlines what cookies are, how we use them, and your choices regarding cookies.
+At **[Your Name]**, we value your privacy and are committed to providing you with clear and transparent information about how we use cookies on our website. This Cookie Policy outlines what cookies are, how we use them, and your choices regarding cookies.
 
 ## What are cookies?
 
@@ -31,4 +31,4 @@ We may update this Cookie Policy from time to time to reflect changes in our bus
 
 ## Contact Us
 
-If you have any questions or concerns about our Cookie Policy or how we use cookies, please contact us at [Your Email].
+If you have any questions or concerns about our Cookie Policy or how we use cookies, please contact us at **[Your Email](mailto:email@example.com)**.

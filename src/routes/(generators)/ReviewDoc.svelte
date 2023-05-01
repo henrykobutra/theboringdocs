@@ -15,7 +15,6 @@
 	export let policyMarkdown: string;
 
 	let html: string;
-	let pathToMarkdown = generatorType + '/' + businessType;
 
 	function replaceText(inputString: string, searchText: string, replacementText: string): string {
 		const regex = new RegExp(escapeRegExp(searchText), 'g');
@@ -28,7 +27,9 @@
 
 	async function loadMarkdown() {
 		try {
-			policyMarkdown = (await import('./' + pathToMarkdown + '.md?raw/* @vite-ignore */')).default;
+			policyMarkdown = (
+				await import('./' + generatorType + '/' + businessType + '.md?raw/* @vite-ignore */')
+			).default;
 
 			if (businessEmail != '') {
 				policyMarkdown = replaceText(policyMarkdown, '[Your Email]', businessEmail);

@@ -13,6 +13,7 @@
 	let businessEmail: string = '';
 	let linkToPrivacyPolicy: string = '';
 	let linkToPaymentAndRefundsPolicy: string = '';
+	let location: string = '';
 	let refundPeriod: string = '';
 	let servicesOffered: string = '';
 
@@ -78,6 +79,7 @@
 				bind:businessEmail
 				bind:linkToPaymentAndRefundsPolicy
 				bind:linkToPrivacyPolicy
+				bind:location
 				bind:refundPeriod
 				bind:servicesOffered
 			/>
@@ -89,6 +91,7 @@
 				bind:businessType
 				bind:linkToPaymentAndRefundsPolicy
 				bind:linkToPrivacyPolicy
+				bind:location
 				bind:refundPeriod
 				bind:servicesOffered
 				bind:generatorType

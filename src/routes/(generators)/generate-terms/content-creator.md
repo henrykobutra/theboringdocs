@@ -40,4 +40,4 @@ We may update these Terms and Conditions from time to time. Please check this pa
 
 ## Contact Us
 
-If you have any questions or concerns about our Terms and Conditions, please contact us at **[Your Email]**.
+If you have any questions or concerns about our Terms and Conditions, please contact us at **[Your Email](mailto:email@example.com)**.
