@@ -2,6 +2,7 @@
 	import SelectBusinessType from '../SelectBusinessType.svelte';
 	import InputInfo from '../InputInfo.svelte';
 	import DownloadDoc from '../DownloadDoc.svelte';
+	import ReviewDoc from '../ReviewDoc.svelte';
 
 	let generatorType = 'cookies';
 	let step = 1;
@@ -25,7 +26,7 @@
 </script>
 
 <div class="flex justify-center mt-8">
-	<div class="max-w-screen-md">
+	<div class="max-w-screen-md w-full">
 		<div class="mockup-window border bg-base-300 w-full">
 			<div class="flex flex-col justify-center py-2 bg-base-200 p-8 items-center">
 				<h1 class="font-mono font text-center text-2xl py-4">The Cookie Policy Generator</h1>
@@ -33,7 +34,7 @@
 					<li class="step step-primary">Type</li>
 					<li class="step {step > 1 ? 'step-primary' : ''}">Info</li>
 					<li class="step {step > 2 ? 'step-primary' : ''}">Review</li>
-					<li class="step {step > 3 ? 'step-primary' : ''}">Download</li>
+					<li class="step {step > 3 ? 'step-primary' : ''}">Copy</li>
 				</ul>
 				<div class="divider" />
 				{#if step === 1}
@@ -43,7 +44,7 @@
 					<InputInfo bind:generatorType bind:businessType bind:businessName bind:businessEmail />
 				{/if}
 				{#if step === 3}
-					<DownloadDoc bind:businessEmail bind:businessName bind:businessType />
+					<ReviewDoc bind:businessEmail bind:businessName bind:businessType />
 				{/if}
 				{#if step === 4}
 					<DownloadDoc bind:businessEmail bind:businessName bind:businessType />
