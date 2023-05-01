@@ -2,7 +2,11 @@
 	export let labelText: string;
 	export let labelTextAlt: string = '';
 	export let placeholder: string;
-	export let bindValue: string;
+	export let value: string = '';
+	const onInput = (e: Event): void => {
+		const target = e.target as HTMLInputElement;
+		value = target.value;
+	};
 </script>
 
 <div class="form-control w-full max-w-xs mt-2">
@@ -13,7 +17,8 @@
 		type="text"
 		{placeholder}
 		class="input input-bordered w-full max-w-xs"
-		bind:value={bindValue}
+		{value}
+		on:input={onInput}
 	/>
 	{#if labelTextAlt}
 		<label for={labelText} class="label">

@@ -6,10 +6,10 @@
 	export let businessType: string;
 	export let businessName: string;
 	export let businessEmail: string;
-	export let linkToPrivacyPolicy: string = '';
-	export let linkToPaymentAndRefundsPolicy: string = '';
-	export let refundPeriod: string = '';
-	export let servicesOffered: string = '';
+	export let linkToPrivacyPolicy: string;
+	export let linkToPaymentAndRefundsPolicy: string;
+	export let refundPeriod: string;
+	export let servicesOffered: string;
 	export let generatorType: string;
 	export let policyMarkdown: string;
 
@@ -35,6 +35,25 @@
 			if (businessName != '') {
 				policyMarkdown = replaceText(policyMarkdown, '[Your Name]', businessName);
 			}
+			if (linkToPrivacyPolicy != '') {
+				const privacyPolicyRegex = /\[Privacy Policy\]\(#\)/g;
+				const privacyPolicyReplacement = `[Privacy Policy](${linkToPrivacyPolicy})`;
+				policyMarkdown = policyMarkdown.replace(privacyPolicyRegex, privacyPolicyReplacement);
+			}
+			if (linkToPaymentAndRefundsPolicy != '') {
+				const paymentAndRefundsPolicyRegex = /\[Payment & Refunds Policy\]\(#\)/g;
+				const paymentAndRefundsPolicyReplacement = `[Payment & Refunds Policy](${linkToPaymentAndRefundsPolicy})`;
+				policyMarkdown = policyMarkdown.replace(
+					paymentAndRefundsPolicyRegex,
+					paymentAndRefundsPolicyReplacement,
+				);
+			}
+			if (refundPeriod != '') {
+				policyMarkdown = replaceText(policyMarkdown, '[Refund Period]', refundPeriod);
+			}
+			if (servicesOffered != '') {
+				policyMarkdown = replaceText(policyMarkdown, '[Services Offered]', servicesOffered);
+			}
 
 			html = MarkdownIt().render(policyMarkdown);
 		} catch (error) {
@@ -45,11 +64,6 @@
 	onMount(async () => {
 		loadMarkdown();
 	});
-
-	// cookie, privacy @ All , only name and email
-	// terms @ content and freelancer, only name and email, for app and ecommerce add privacy and refund link
-	// faq @ All, contact info, for ecommerce and apps, refund period, for content and freelancer, services
-	// refund @ all period, contact info
 </script>
 
 <section class="mb-4">
