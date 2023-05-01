@@ -8,6 +8,7 @@
 	export let businessEmail: string;
 	export let linkToPrivacyPolicy: string;
 	export let linkToPaymentAndRefundsPolicy: string;
+	export let location: string;
 	export let refundPeriod: string;
 	export let servicesOffered: string;
 	export let generatorType: string;
@@ -47,6 +48,9 @@
 					paymentAndRefundsPolicyRegex,
 					paymentAndRefundsPolicyReplacement,
 				);
+			}
+			if (location != '') {
+				policyMarkdown = replaceText(policyMarkdown, '[Your Location]', location);
 			}
 			if (refundPeriod != '') {
 				policyMarkdown = replaceText(policyMarkdown, '[Refund Period]', refundPeriod);

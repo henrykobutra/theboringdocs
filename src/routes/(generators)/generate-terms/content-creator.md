@@ -1,6 +1,6 @@
 # Terms and Conditions
 
-Welcome to [Your Name]! We are a content creator and provide various digital content including but not limited to videos, artwork, and educational material. Please take a moment to read our Terms and Conditions before using our website.
+Welcome to **[Your Name]**! We are a content creator and provide various digital content including but not limited to videos, artwork, and educational material. Please take a moment to read our Terms and Conditions before using our website.
 
 ## Acceptance of Terms
 
@@ -32,7 +32,7 @@ We reserve the right to terminate your access to our website at any time without
 
 ## Governing Law
 
-These Terms and Conditions are governed by the laws of [Your Location].
+These Terms and Conditions are governed by the laws of **[Your Location]**.
 
 ## Changes to Terms and Conditions
 
@@ -40,4 +40,4 @@ We may update these Terms and Conditions from time to time. Please check this pa
 
 ## Contact Us
 
-If you have any questions or concerns about our Terms and Conditions, please contact us at [Your Email].
+If you have any questions or concerns about our Terms and Conditions, please contact us at **[Your Email]**.

@@ -1,6 +1,6 @@
 # Terms of Service
 
-Thank you for considering [Your Name]! Before you engage with us, please take a moment to read our Terms of Service. By using our services, you agree to be bound by these terms and conditions.
+Thank you for considering **[Your Name]**! Before you engage with us, please take a moment to read our Terms of Service. By using our services, you agree to be bound by these terms and conditions.
 
 ## Acceptance of Terms
 
@@ -32,7 +32,7 @@ Either party may terminate the agreement with written notice. Upon termination, 
 
 ## Governing Law
 
-These Terms of Service are governed by the laws of [Your Location].
+These Terms of Service are governed by the laws of **[Your Location]**.
 
 ## Changes to Terms of Service
 
@@ -40,4 +40,4 @@ We may update these Terms of Service from time to time. Please check this page r
 
 ## Contact Us
 
-If you have any questions or concerns about our Terms of Service, please contact us at [Your Email].
+If you have any questions or concerns about our Terms of Service, please contact us at **[Your Email]**.

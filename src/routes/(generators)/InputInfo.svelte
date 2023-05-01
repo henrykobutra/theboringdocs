@@ -6,32 +6,46 @@
 	export let businessEmail: string;
 	export let linkToPrivacyPolicy: string;
 	export let linkToPaymentAndRefundsPolicy: string;
+	export let location: string;
 	export let refundPeriod: string;
 	export let servicesOffered: string;
 </script>
 
 <div class="mb-4">
 	<h2 class="font-serif text-xl">Provide some basic info</h2>
-	<FormInput labelText="What's the name?" placeholder="Banana Inc." bind:value={businessName} />
+	<FormInput
+		labelText="What's the name?"
+		placeholder="Banana Inc."
+		bind:value={businessName}
+		labelTextAlt="Dummy name also works"
+	/>
 	<FormInput
 		labelText="What's a good contact email?"
 		labelTextAlt="Used for text generation, not collecting"
 		placeholder="cherry@banana.xyz"
 		bind:value={businessEmail}
 	/>
-	{#if generatorType === 'generate-terms' && (businessType === 'app' || businessType === 'ecommerce')}
+	{#if generatorType === 'generate-terms'}
 		<FormInput
-			labelText="Link To Privacy Policy"
-			labelTextAlt="If you don't have one, you can generate one later"
-			placeholder="example.com/privacy-policy"
-			bind:value={linkToPrivacyPolicy}
+			labelText="Where you at?"
+			labelTextAlt="State or Country ... or both?"
+			placeholder="Texas, USA"
+			bind:value={location}
 		/>
-		<FormInput
-			labelText="Link To Payment & Refunds Policy"
-			labelTextAlt="If you don't have one, you can generate one later"
-			placeholder="example.com/refund-policy"
-			bind:value={linkToPaymentAndRefundsPolicy}
-		/>
+		{#if businessType === 'app' || businessType === 'ecommerce'}
+			<FormInput
+				labelText="Link To Privacy Policy"
+				labelTextAlt="If you don't have one, you can generate one later"
+				placeholder="example.com/privacy-policy"
+				bind:value={linkToPrivacyPolicy}
+			/>
+			<FormInput
+				labelText="Link To Payment & Refunds Policy"
+				labelTextAlt="If you don't have one, you can generate one later"
+				placeholder="example.com/refund-policy"
+				bind:value={linkToPaymentAndRefundsPolicy}
+			/>
+		{/if}
 	{/if}
 	{#if generatorType === 'generate-faqs'}
 		{#if businessType === 'apps' || businessType === 'ecommerce'}
