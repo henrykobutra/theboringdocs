@@ -1,18 +1,20 @@
 <script lang="ts">
 	import SelectBusinessType from '../SelectBusinessType.svelte';
 	import InputInfo from '../InputInfo.svelte';
+	import DownloadDoc from '../DownloadDoc.svelte';
 
+	let generatorType = 'cookies';
 	let step = 1;
 	let businessType = '';
-	let generatorType = 'cookies';
 	let businessName = '';
 	let businessEmail = '';
+
 	function handleForward() {
 		step++;
 	}
 	function handleReset() {
 		step = 1;
-		businessType = '';
+		businessType = businessName = businessEmail = '';
 	}
 	// Handle Reset
 	$: if (step === 1) {
@@ -23,15 +25,15 @@
 </script>
 
 <div class="flex justify-center mt-8">
-	<div class="max-w-screen-xl">
+	<div class="max-w-screen-md">
 		<div class="mockup-window border bg-base-300 w-full">
 			<div class="flex flex-col justify-center py-2 bg-base-200 p-8 items-center">
 				<h1 class="font-mono font text-center text-2xl py-4">The Cookie Policy Generator</h1>
 				<ul class="steps font-mono">
 					<li class="step step-primary">Type</li>
 					<li class="step {step > 1 ? 'step-primary' : ''}">Info</li>
-					<li class="step">Review</li>
-					<li class="step">Download</li>
+					<li class="step {step > 2 ? 'step-primary' : ''}">Review</li>
+					<li class="step {step > 3 ? 'step-primary' : ''}">Download</li>
 				</ul>
 				<div class="divider" />
 				{#if step === 1}
@@ -40,12 +42,19 @@
 				{#if step === 2}
 					<InputInfo bind:generatorType bind:businessType bind:businessName bind:businessEmail />
 				{/if}
+				{#if step === 3}
+					<DownloadDoc bind:businessEmail bind:businessName bind:businessType />
+				{/if}
+				{#if step === 4}
+					<DownloadDoc bind:businessEmail bind:businessName bind:businessType />
+				{/if}
 				<div class="divider" />
 				<section class="w-full flex flex-col items-center">
 					{#if step > 1}
 						<div class="flex flex-row justify-between w-full">
 							<button class="btn btn-outline" on:click={() => step--}>Back</button>
-							<button class="btn btn-primary hover:btn-success" on:click={() => step--}>Next</button
+							<button class="btn btn-primary hover:btn-success" on:click={() => handleForward()}
+								>Next</button
 							>
 						</div>
 						<div class="divider">OR</div>
