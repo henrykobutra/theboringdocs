@@ -69,7 +69,32 @@
 	}
 </script>
 
-<p class="font-mono text-warning">NOT LEGAL ADVICE</p>
+<section class="mb-4 w-full">
+	<div class="chat chat-start">
+		<div class="chat-image avatar">
+			<div class="w-10 rounded-full">
+				<img src="/images/henry.png" alt="Henry" />
+			</div>
+		</div>
+		<div class="chat-header">
+			Henry K.
+			<time class="text-xs opacity-50">Just now</time>
+		</div>
+		<div class="chat-bubble">Go ahead and copy whatever format suits you best!</div>
+	</div>
+	<div class="chat chat-start">
+		<div class="chat-image avatar">
+			<div class="w-10 rounded-full">
+				<img src="/images/isabella.png" alt="Isabella" />
+			</div>
+		</div>
+		<div class="chat-header">
+			The Boring Bot
+			<time class="text-xs opacity-50">Just now</time>
+		</div>
+		<div class="chat-bubble chat-bubble-warning">Again, this is NOT LEGAL ADVICE.</div>
+	</div>
+</section>
 <div class="flex justify-end w-full">
 	<div class="tabs tabs-boxed">
 		<button

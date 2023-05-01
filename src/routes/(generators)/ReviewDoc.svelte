@@ -52,15 +52,44 @@
 	});
 </script>
 
-<section>
-	<p class="font-serif">
-		Here's a simple "Cookie Policy" that you can use for your {businessType} business.
-	</p>
-	<p class="font-serif">
-		Remember to replace the [Your Name] and [Your Email] placeholders with your own name and email
-		address.
-	</p>
-	<p class="font-serif text-warning">And btw, <span class="font-mono">NOT LEGAL ADVICE!</span></p>
+<section class="mb-4">
+	<div class="chat chat-start">
+		<div class="chat-image avatar">
+			<div class="w-10 rounded-full">
+				<img src="/images/henry.png" alt="Henry" />
+			</div>
+		</div>
+		<div class="chat-header">
+			Henry K.
+			<time class="text-xs opacity-50">Just now</time>
+		</div>
+		<div class="chat-bubble">
+			Here's a simple "Cookie Policy" starter template that you could use for your {businessType} website.
+		</div>
+	</div>
+	<div class="chat chat-start">
+		<div class="chat-image avatar">
+			<div class="w-10 rounded-full">
+				<img src="/images/henry.png" alt="Henry" />
+			</div>
+		</div>
+		<div class="chat-bubble">
+			Remember to replace the [Your Name] and [Your Email] placeholders with your own name and email
+			address.
+		</div>
+	</div>
+	<div class="chat chat-start">
+		<div class="chat-image avatar">
+			<div class="w-10 rounded-full">
+				<img src="/images/isabella.png" alt="Isabella" />
+			</div>
+		</div>
+		<div class="chat-header">
+			The Boring Bot
+			<time class="text-xs opacity-50">Just now</time>
+		</div>
+		<div class="chat-bubble chat-bubble-warning">Oh and this is NOT LEGAL ADVICE.</div>
+	</div>
 </section>
 
 <div class="card bg-base-100 shadow-md">

@@ -4,25 +4,38 @@
 	import DownloadDoc from '../DownloadDoc.svelte';
 	import ReviewDoc from '../ReviewDoc.svelte';
 
-	let generatorType = 'cookies';
 	let step = 1;
+	let generatorType = 'cookies';
 	let businessType = '';
 	let businessName = '';
 	let businessEmail = '';
 
-	function handleForward() {
-		step++;
-	}
-	function handleReset() {
+	function resetForm() {
 		step = 1;
-		businessType = businessName = businessEmail = '';
+		businessType = '';
+		businessName = '';
+		businessEmail = '';
 	}
-	// Handle Reset
+
+	function handleForward() {
+		if (step < 4) {
+			step++;
+		}
+	}
+
+	function handleBackward() {
+		if (step > 1) {
+			step--;
+		}
+	}
+
 	$: if (step === 1) {
-		handleReset();
+		resetForm();
 	}
-	// Step 1: Select business type
-	$: businessType && handleForward();
+
+	$: if (businessType) {
+		handleForward();
+	}
 </script>
 
 <div class="flex justify-center mt-8">
@@ -49,34 +62,36 @@
 				{#if step === 4}
 					<DownloadDoc bind:businessEmail bind:businessName bind:businessType />
 				{/if}
-				<div class="divider" />
 				<section class="w-full flex flex-col items-center">
 					{#if step > 1}
+						<div class="divider" />
 						<div class="flex flex-row justify-between w-full">
-							<button class="btn btn-outline" on:click={() => step--}>Back</button>
-							<button class="btn btn-primary hover:btn-success" on:click={() => handleForward()}
-								>Next</button
+							<button
+								class="btn btn-outline"
+								on:click={() => {
+									if (step === 4) {
+										step = 2;
+									} else {
+										handleBackward();
+									}
+								}}
 							>
-						</div>
-						<div class="divider">OR</div>
-					{/if}
-					<div class="flex flex-col justify-between gap-2">
-						{#if step === 1}
-							<div class="tooltip" data-tip="Just get over step 1 please">
-								<button class="btn btn-warning btn-xs {step < 2 ? 'btn-disabled' : ''}">
-									Just take me to the template
-								</button>
-							</div>
-						{:else}
-							<button class="btn btn-warning btn-sm"> Just take me to the template </button>
-						{/if}
-						{#if step > 1}
-							<div class="divider">OR</div>
-							<button class="btn btn-info btn-sm" on:click={() => handleReset()}>
-								Start Over
+								{step === 2 ? 'Start Over' : 'Edit Info'}
 							</button>
-						{/if}
-					</div>
+							<button
+								class="btn btn-primary hover:btn-success"
+								on:click={() => {
+									if (step === 4) {
+										resetForm();
+									} else {
+										handleForward();
+									}
+								}}
+							>
+								{step === 4 ? 'Start Over' : 'Next'}
+							</button>
+						</div>
+					{/if}
 				</section>
 			</div>
 		</div>
