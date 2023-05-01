@@ -1,6 +1,6 @@
 # Terms of Service
 
-Thank you for considering our services! Before you engage with us, please take a moment to read our Terms of Service. By using our services, you agree to be bound by these terms and conditions.
+Thank you for considering [Your Name]! Before you engage with us, please take a moment to read our Terms of Service. By using our services, you agree to be bound by these terms and conditions.
 
 ## Acceptance of Terms
 

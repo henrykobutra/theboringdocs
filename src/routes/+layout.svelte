@@ -12,11 +12,11 @@
 		</div>
 		<div>
 			<span class="footer-title">Generators</span>
-			<a class="link link-hover">Terms & Conditions</a>
-			<a class="link link-hover">Privacy Policy</a>
-			<a class="link link-hover">Cookie Policy</a>
-			<a class="link link-hover">FAQs</a>
-			<a class="link link-hover">Payment & Refunds</a>
+			<a href="/generate-terms" class="link link-hover">Terms & Conditions</a>
+			<a href="/generate-privacy" class="link link-hover">Privacy Policy</a>
+			<a href="/generate-cookies" class="link link-hover">Cookie Policy</a>
+			<a href="/generate-faqs" class="link link-hover">FAQs</a>
+			<a href="/generate-payment-refunds" class="link link-hover">Payment & Refunds</a>
 		</div>
 		<div>
 			<span class="footer-title">Read More</span>

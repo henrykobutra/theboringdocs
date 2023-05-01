@@ -12,7 +12,7 @@ Our website is intended for personal and non-commercial use only. You may not us
 
 ## Privacy
 
-We are committed to protecting your privacy. Please read our [Privacy Policy](/generate-privacy) to understand how we collect and use your personal information.
+We are committed to protecting your privacy. Please read our [Privacy Policy](#) to understand how we collect and use your personal information.
 
 ## Intellectual Property
 
@@ -20,7 +20,7 @@ All content on our website, including but not limited to text, graphics, logos, 
 
 ## Payment and Refunds
 
-We accept various forms of payment and offer refunds under certain circumstances. Please refer to our [Payment and Refund Policy](/generate-payment-refunds) for more information.
+We accept various forms of payment and offer refunds under certain circumstances. Please refer to our [Payment and Refund Policy](#) for more information.
 
 ## Limitation of Liability
 

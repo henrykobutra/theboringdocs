@@ -6,6 +6,10 @@
 	export let businessType: string;
 	export let businessName: string;
 	export let businessEmail: string;
+	export let linkToPrivacyPolicy: string = '';
+	export let linkToPaymentAndRefundsPolicy: string = '';
+	export let refundPeriod: string = '';
+	export let servicesOffered: string = '';
 	export let generatorType: string;
 	export let policyMarkdown: string;
 
@@ -23,7 +27,7 @@
 
 	async function loadMarkdown() {
 		try {
-			policyMarkdown = (await import('./' + pathToMarkdown + '.md?raw')).default;
+			policyMarkdown = (await import('./' + pathToMarkdown + '.md?raw/* @vite-ignore */')).default;
 
 			if (businessEmail != '') {
 				policyMarkdown = replaceText(policyMarkdown, '[Your Email]', businessEmail);
@@ -41,6 +45,11 @@
 	onMount(async () => {
 		loadMarkdown();
 	});
+
+	// cookie, privacy @ All , only name and email
+	// terms @ content and freelancer, only name and email, for app and ecommerce add privacy and refund link
+	// faq @ All, contact info, for ecommerce and apps, refund period, for content and freelancer, services
+	// refund @ all period, contact info
 </script>
 
 <section class="mb-4">

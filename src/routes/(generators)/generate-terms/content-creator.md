@@ -1,6 +1,6 @@
 # Terms and Conditions
 
-Welcome to our website! We are a content creator and provide various digital content including but not limited to videos, artwork, and educational material. Please take a moment to read our Terms and Conditions before using our website.
+Welcome to [Your Name]! We are a content creator and provide various digital content including but not limited to videos, artwork, and educational material. Please take a moment to read our Terms and Conditions before using our website.
 
 ## Acceptance of Terms
 

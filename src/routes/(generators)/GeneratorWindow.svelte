@@ -3,13 +3,19 @@
 	import InputInfo from './InputInfo.svelte';
 	import DownloadDoc from './DownloadDoc.svelte';
 	import ReviewDoc from './ReviewDoc.svelte';
+	import { friendly } from '$lib/utils/words';
 
 	export let generatorType: string;
 
-	let step = 1;
-	let businessType = '';
-	let businessName = '';
-	let businessEmail = '';
+	let step: number = 1;
+	let businessType: string = '';
+	let businessName: string = '';
+	let businessEmail: string = '';
+	let linkToPrivacyPolicy: string = '';
+	let linkToPaymentAndRefundsPolicy: string = '';
+	let refundPeriod: string = '';
+	let servicesOffered: string = '';
+
 	let policyMarkdown = '';
 
 	let nextButtonText = 'Next';
@@ -51,7 +57,9 @@
 
 <div class="mockup-window border bg-base-300 w-full">
 	<div class="flex flex-col justify-center py-2 bg-base-200 p-8 items-center">
-		<h1 class="font-mono font text-center text-2xl py-4">The Cookie Policy Generator</h1>
+		<h1 class="font-mono font text-center text-2xl py-4">
+			The {friendly(generatorType)} Generator
+		</h1>
 		<ul class="steps font-mono">
 			<li class="step step-primary">Type</li>
 			<li class="step {step > 1 ? 'step-primary' : ''}">Info</li>
@@ -63,13 +71,26 @@
 			<SelectBusinessType bind:businessType />
 		{/if}
 		{#if step === 2}
-			<InputInfo bind:generatorType bind:businessType bind:businessName bind:businessEmail />
+			<InputInfo
+				bind:generatorType
+				bind:businessType
+				bind:businessName
+				bind:businessEmail
+				bind:linkToPaymentAndRefundsPolicy
+				bind:linkToPrivacyPolicy
+				bind:refundPeriod
+				bind:servicesOffered
+			/>
 		{/if}
 		{#if step === 3}
 			<ReviewDoc
 				bind:businessEmail
 				bind:businessName
 				bind:businessType
+				bind:linkToPaymentAndRefundsPolicy
+				bind:linkToPrivacyPolicy
+				bind:refundPeriod
+				bind:servicesOffered
 				bind:generatorType
 				bind:policyMarkdown
 			/>

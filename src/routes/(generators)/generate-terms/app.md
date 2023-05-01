@@ -12,7 +12,7 @@ By using [Your Name], you acknowledge that you have read, understood, and agreed
 
 ## Privacy
 
-We are committed to protecting your privacy. Please read our _[Privacy Policy]_ to understand how we collect and use your personal information.
+We are committed to protecting your privacy. Please read our [Privacy Policy](#) to understand how we collect and use your personal information.
 
 ## Intellectual Property
 
@@ -20,7 +20,7 @@ All content on [Your Name], including but not limited to text, graphics, logos, 
 
 ## Payment and Refunds
 
-We may offer paid services. If you choose to purchase any of our paid services, you agree to pay the specified amount. For more information refer to our _[Payment & Refunds Policy]_.
+We may offer paid services. If you choose to purchase any of our paid services, you agree to pay the specified amount. For more information refer to our [Payment & Refunds Policy](#).
 
 ## Limitation of Liability
 
