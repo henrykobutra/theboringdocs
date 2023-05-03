@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
 	import '../app.css';
+	const currentYear: string = new Date().getFullYear().toString();
 </script>
 
 <div class="flex flex-col min-h-screen">
@@ -8,7 +9,7 @@
 	<footer class="footer mt-10 p-10 bg-base-200 text-base-content">
 		<div>
 			<!-- TODO: Add footer logo -->
-			<p>Henry Kobutra & Co.<br />Making and breaking stuff since 1988</p>
+			<p>Henry Kobutra & Co.<br />Still making and breaking stuff in {currentYear}</p>
 		</div>
 		<div>
 			<span class="footer-title">Generators</span>

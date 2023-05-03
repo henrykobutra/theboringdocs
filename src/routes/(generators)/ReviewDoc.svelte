@@ -94,15 +94,7 @@
 					<img src="/images/henry.png" alt="Henry" />
 				</div>
 			</div>
-			<div class="chat-bubble">
-				Remember to replace the{businessName === '' ? ' [Your Name] ' : ''}{businessName === '' &&
-				businessEmail === ''
-					? 'and'
-					: ''}{businessEmail === '' ? ' [Your Email] ' : ''}placeholder{businessName === '' &&
-				businessEmail === ''
-					? 's'
-					: ''} with your own.
-			</div>
+			<div class="chat-bubble">Read through this once and replace any placeholders necessary.</div>
 		</div>
 	{/if}
 	<div class="chat chat-start">
