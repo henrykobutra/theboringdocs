@@ -1,3 +1,10 @@
+<svelte:head>
+	<title>Terms of Use - The Boring Docs</title>
+	<meta
+		name="description"
+		content="Don't waste your time drafting policies from scratch! The Boring Docs offers free and simple policy templates for your website, including Terms and Conditions, Privacy Policy, Cookie Policy, Payment and Refunds Policy, and FAQs."
+	/>
+</svelte:head>
 <div class="prose">
 	<h1>Terms of Use</h1>
 

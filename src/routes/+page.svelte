@@ -2,6 +2,13 @@
 	import DocCard from './DocCard.svelte';
 </script>
 
+<svelte:head>
+	<title>The Boring Docs - Free and Simple Policy Templates for Your Website</title>
+	<meta
+		name="description"
+		content="Don't waste your time drafting policies from scratch! The Boring Docs offers free and simple policy templates for your website, including Terms and Conditions, Privacy Policy, Cookie Policy, Payment and Refunds Policy, and FAQs."
+	/>
+</svelte:head>
 <div class="flex flex-col items-center">
 	<section class="text-center py-8">
 		<h1 class="font-bold text-7xl">The Boring Docs</h1>

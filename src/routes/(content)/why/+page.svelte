@@ -1,3 +1,10 @@
+<svelte:head>
+	<title>Simplifying Website Policies for Better Compliance</title>
+	<meta
+		name="description"
+		content="Website policies like Terms and Conditions, Privacy Policy, Cookie Policy, Payment and Refunds Policy, and FAQs are essential for any website, but can be overwhelming to understand. At The Boring Docs, we simplify the importance of these pages in plain language. Terms and Conditions are like the rules of the website, ensuring that everyone plays fair. Privacy Policy keeps your personal information safe by explaining what the website owner can and cannot do with it. Cookie Policy collects small bits of information to help make your browsing experience better. Payment and Refunds Policy guarantees your satisfaction with your purchase. Finally, FAQs answer all your questions about the website and its features. Join us and learn how to make website compliance simple and easy!"
+	/>
+</svelte:head>
 <div class="prose">
 	<h1>Why You Need These Pages on Your Website</h1>
 

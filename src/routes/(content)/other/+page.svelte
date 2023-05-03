@@ -1,3 +1,10 @@
+<svelte:head>
+	<title>Explore My Other Stuff</title>
+	<meta
+		name="description"
+		content="Welcome to my world of fun and useful apps! As a product manager, I enjoy creating apps that are not only functional but also bring joy to people's lives. Uncodename.com generates unique and fun codenames for your projects, games, or just for fun. UptimeBear.com is a simple website uptime monitor that ensures you never miss a beat. And on Kobutra.com, you can learn more about me, my projects, and my interests. Check back often for updates, as I'm always working on new and exciting apps!"
+	/>
+</svelte:head>
 <div class="prose">
 	<h1>Check Out My Other Stuff!</h1>
 
