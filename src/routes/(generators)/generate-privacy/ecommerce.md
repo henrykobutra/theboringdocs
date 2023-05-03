@@ -28,4 +28,4 @@ We may update this Privacy Policy from time to time to reflect changes in our bu
 
 ## Contact Us
 
-If you have any questions or concerns about our Privacy Policy or how we handle your personal information, please contact us at **[Your Email](mailto:email@example.com)**.
+If you have any questions or concerns about our Privacy Policy or how we handle your personal information, please contact us at **[Your Email]**.

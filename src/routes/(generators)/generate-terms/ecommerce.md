@@ -40,4 +40,4 @@ We may update these Terms of Service from time to time. Please check this page r
 
 ## Contact Us
 
-If you have any questions or concerns about our Terms of Service, please contact us at [Your Email](mailto:email@example.com).
+If you have any questions or concerns about our Terms of Service, please contact us at **[Your Email]**.

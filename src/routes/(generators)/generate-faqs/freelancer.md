@@ -4,7 +4,7 @@
 As a freelancer/consulting agency/digital service provider, we offer services such as **[Services Offered]**.
 
 **How can I contact you?**
-You can reach out to us through [Your Email](mailto:email@example.com). We usually respond within [time frame, such as 24 hours].
+You can reach out to us through **[Your Email]**. We usually respond within [time frame, such as 24 hours].
 
 **Can you provide references or examples of past work?**
 Yes, we can provide references and examples of past work upon request. Please reach out to us with your inquiry.
