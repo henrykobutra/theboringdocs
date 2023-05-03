@@ -8,8 +8,13 @@
 	<div class="grow" />
 	<footer class="footer mt-10 p-10 bg-base-200 text-base-content">
 		<div>
-			<!-- TODO: Add footer logo -->
-			<p>Henry Kobutra & Co.<br />Still making and breaking stuff in {currentYear}</p>
+			<p>
+				<a
+					href="https://kobutra.com"
+					target="
+				">Henry Kobutra & Co.</a
+				><br />Still making and breaking stuff in {currentYear}
+			</p>
 		</div>
 		<div>
 			<span class="footer-title">Generators</span>
@@ -21,16 +26,18 @@
 		</div>
 		<div>
 			<span class="footer-title">Read More</span>
-			<a class="link link-hover">Cool, but why?</a>
-			<a class="link link-hover">Other Apps</a>
-			<a class="link link-hover">Feedback</a>
-			<a class="link link-hover">Buy me a coffee ☕️</a>
+			<a href="/why" class="link link-hover">Cool, but why?</a>
+			<a href="/other" class="link link-hover">Other Apps</a>
+			<a href="https://github.com/henrykobutra" target="_blank" class="link link-hover">Feedback</a>
+			<a href="https://www.buymeacoffee.com/henrykobutra" target="_blank" class="link link-hover"
+				>Buy me a coffee ☕️</a
+			>
 		</div>
 		<div>
 			<span class="footer-title">Boring</span>
-			<a class="link link-hover">Terms of use</a>
-			<a class="link link-hover">Privacy policy</a>
-			<a class="link link-hover">Cookie policy</a>
+			<a href="/terms" class="link link-hover">Terms of use</a>
+			<a href="/privacy" class="link link-hover">Privacy policy</a>
+			<a href="/cookies" class="link link-hover">Cookie policy</a>
 		</div>
 	</footer>
 </div>
